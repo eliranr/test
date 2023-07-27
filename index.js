@@ -10,6 +10,8 @@ const { v4: uuidv4 } = require('uuid');
 var fs = require('fs');
 
 
+
+
 const multer  = require('multer')
 const upload = multer()
 
@@ -52,6 +54,11 @@ async function uploadFile(path, filename) {
 
 //git remote add origin https://github.com/eliranr/bookeet-api-server2023.git
 //git push -u origin master
+
+const cors = require('cors');
+app.use(cors({
+    origin: 'https://www.bookeet.co.il'
+}));
 
 
 app.use(session({
