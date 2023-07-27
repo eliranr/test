@@ -10,11 +10,6 @@ const { v4: uuidv4 } = require('uuid');
 var fs = require('fs');
 
 
-var cors = require('cors')
-
-
-
-
 const multer  = require('multer')
 const upload = multer()
 
@@ -26,7 +21,6 @@ const db = admin.firestore();
 const storageRef = admin.storage().bucket(`gs://bookeet-x.appspot.com`);
 const app = express();
 
-app.use(cors())
 
 async function uploadFile(path, filename) {
     const storage = await storageRef.upload(path, {
