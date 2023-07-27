@@ -312,7 +312,8 @@ app.post("/login", async (req, res) => {
                 httpOnly: true,
                 signed: true,
             });
-            res.send(true);
+            res.send(manager);
+            //res.send(true);
         } else {
             res.send({ids: 'pass', mess: 'wrong_pass'})
         }
