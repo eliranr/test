@@ -56,9 +56,9 @@ async function uploadFile(path, filename) {
 //git push -u origin master
 
 const cors = require('cors');
-app.use(cors({
-    origin: 'https://www.bookeet.co.il'
-}));
+// app.use(cors({
+//     origin: 'https://www.bookeet.co.il'
+// }));
 
 
 app.use(session({
@@ -312,8 +312,8 @@ app.post("/login", async (req, res) => {
                 httpOnly: true,
                 signed: true,
             });
-            res.send(manager);
-            //res.send(true);
+            //res.send(manager);
+            res.send(true);
         } else {
             res.send({ids: 'pass', mess: 'wrong_pass'})
         }
