@@ -57,8 +57,7 @@ async function uploadFile(path, filename) {
 
 const cors = require('cors');
 app.use(cors({
-    origin: '*'
-    // origin: 'https://www.bookeet.co.il'
+    origin: 'https://www.bookeet.co.il'
 }));
 
 
